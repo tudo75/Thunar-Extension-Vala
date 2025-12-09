@@ -8,13 +8,13 @@ pluginsdatadir = join_paths(datadir, 'thunarx-3')
 pluginslibdir = join_paths(libdir, 'thunarx-3')
 
 sources = files(
-    'fooextension.vala',
+    'samplemenuprovider.vala',
 )
 
 libsessionsaver = library(
-    'thunar-extension-vala',
+    'samplemenuprovidervala',
     sources,
-    vala_header: 'fooextension.h',
+    vala_header: 'samplemenuprovider.h',
     dependencies : dependencies,
     vala_args: [
         '--abi-stability'
