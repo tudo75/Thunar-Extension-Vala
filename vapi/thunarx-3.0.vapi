@@ -109,12 +109,11 @@ namespace Thunarx {
     /* FIXED: Added missing virtual methods to MenuProvider 
        Essential for Context Menus
     */
-    /* FIXED: Changed Gtk.Window to Gtk.Widget to match C header signature */
     [CCode (cheader_filename = "thunarx/thunarx.h", type_id = "thunarx_menu_provider_get_type ()")]
     public interface MenuProvider : GLib.Object {
-        public abstract GLib.List<Thunarx.MenuItem> get_file_menu_items (Gtk.Widget window, GLib.List<Thunarx.FileInfo> files);
-        public abstract GLib.List<Thunarx.MenuItem> get_folder_menu_items (Gtk.Widget window, Thunarx.FileInfo folder);
-        public abstract GLib.List<Thunarx.MenuItem> get_dnd_menu_items (Gtk.Widget window, Thunarx.FileInfo folder, GLib.List<Thunarx.FileInfo> files);
+        public abstract GLib.List<Thunarx.MenuItem> get_file_menu_items (Gtk.Window window, GLib.List<Thunarx.FileInfo> files);
+        public abstract GLib.List<Thunarx.MenuItem> get_folder_menu_items (Gtk.Window window, Thunarx.FileInfo folder);
+        public abstract GLib.List<Thunarx.MenuItem> get_dnd_menu_items (Gtk.Window window, Thunarx.FileInfo folder, GLib.List<Thunarx.FileInfo> files);
     }
 
     /* FIXED: Added missing virtual method to PreferencesProvider 
