@@ -1,10 +1,10 @@
 # 1. PROJECT SETUP
 # project name and programming language
 project(
-'com.github.tudo75.thunar-extension-vala',
-['vala', 'c'],
+        'com.github.tudo75.thunar-extension-vala',
+        ['vala', 'c'],
         version: '0.0.1',
-        meson_version: '>= 0.50.0',)
+      )
 
 # 2. TRANSLATIONS
 # Configure gettext for translations handling
