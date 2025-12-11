@@ -1,22 +1,22 @@
 #: src/main.vala:20 src/main.vala:50 src/main.vala:82 src/main.vala:111
 msgid "Say Hello"
-msgstr ""
+msgstr "Ciao"
 
 #: src/main.vala:20 src/main.vala:50 src/main.vala:82
 msgid "Shows a dialog"
-msgstr ""
+msgstr "Mostra una finestra di dialogo"
 
 #: src/main.vala:23
 #, c-format
 msgid "You selected %u file(s)/folder(s)."
-msgstr ""
+msgstr "Hai selezionat %u file/cartelle"
 
 #: src/main.vala:53
 #, c-format
 msgid "You selected %s folder."
-msgstr ""
+msgstr "HAi selezionato la cartella %s"
 
 #: src/main.vala:85
 #, c-format
 msgid "You selected %u file(s)/folder(s) to drag into %s folder."
-msgstr ""
+msgstr "Hai selezionato %u file/cartelle da trascinare in %s"
