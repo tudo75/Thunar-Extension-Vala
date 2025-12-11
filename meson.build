@@ -49,5 +49,4 @@ shared_library('hello-plugin',
 message('Thunar extension directory detected as: ' + extensions_dir)
 
 # 8 SUBDIR INCLUSIONS
-# subdir('po')
-# subdir('src')
+subdir('po')

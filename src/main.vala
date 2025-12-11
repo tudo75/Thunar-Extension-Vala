@@ -17,10 +17,10 @@ public class HelloPlugin : GLib.Object, Thunarx.MenuProvider, Thunarx.PropertyPa
     public GLib.List<Thunarx.MenuItem> get_file_menu_items (Gtk.Widget window, GLib.List<Thunarx.FileInfo> files) {
         var items = new GLib.List<Thunarx.MenuItem> ();
 
-        var item = new Thunarx.MenuItem ("HelloPlugin::say-hello", "Say Hello", "Shows a dialog", "dialog-information");
+        var item = new Thunarx.MenuItem ("HelloPlugin::say-hello", _("Say Hello"), _("Shows a dialog"), "dialog-information");
         
         item.activate.connect (() => {
-            var msg = "You selected %u file(s)/folder(s).".printf(files.length());
+            var msg = _("You selected %u file(s)/folder(s).").printf(files.length());
             
             // 2. We must cast 'window' to 'Gtk.Window' because MessageDialog expects a Window, not a generic Widget
             var parent_window = window as Gtk.Window;
@@ -47,10 +47,10 @@ public class HelloPlugin : GLib.Object, Thunarx.MenuProvider, Thunarx.PropertyPa
     public GLib.List<Thunarx.MenuItem> get_folder_menu_items (Gtk.Widget window, Thunarx.FileInfo folder) {
         var items = new GLib.List<Thunarx.MenuItem> ();
 
-        var item = new Thunarx.MenuItem ("HelloPlugin::say-hello", "Say Hello", "Shows a dialog", "dialog-information");
+        var item = new Thunarx.MenuItem ("HelloPlugin::say-hello", _("Say Hello"), _("Shows a dialog"), "dialog-information");
         
         item.activate.connect (() => {
-            var msg = "You selected %s folder.".printf(folder.get_name ());
+            var msg = _("You selected %s folder.").printf(folder.get_name ());
             
             // 2. We must cast 'window' to 'Gtk.Window' because MessageDialog expects a Window, not a generic Widget
             var parent_window = window as Gtk.Window;
@@ -79,10 +79,10 @@ public class HelloPlugin : GLib.Object, Thunarx.MenuProvider, Thunarx.PropertyPa
     public GLib.List<Thunarx.MenuItem> get_dnd_menu_items (Gtk.Widget window, Thunarx.FileInfo folder, GLib.List<Thunarx.FileInfo> files) {
         var items = new GLib.List<Thunarx.MenuItem> ();
 
-        var item = new Thunarx.MenuItem ("HelloPlugin::say-hello-dnd", "Say Hello", "Shows a dialog", "dialog-information");
+        var item = new Thunarx.MenuItem ("HelloPlugin::say-hello-dnd", _("Say Hello"), _("Shows a dialog"), "dialog-information");
         
         item.activate.connect (() => {
-            var msg = "You selected %u file(s)/folder(s) to drag into %s folder.".printf(files.length(), folder.get_name ());
+            var msg = _("You selected %u file(s)/folder(s) to drag into %s folder.").printf(files.length(), folder.get_name ());
             print (msg);
             
             // 2. We must cast 'window' to 'Gtk.Window' because MessageDialog expects a Window, not a generic Widget
@@ -108,7 +108,7 @@ public class HelloPlugin : GLib.Object, Thunarx.MenuProvider, Thunarx.PropertyPa
     public GLib.List<Thunarx.PropertyPage> get_pages (GLib.List<Thunarx.FileInfo> files) {
         var pages = new GLib.List<Thunarx.PropertyPage> (); 
 
-        var page = new Thunarx.PropertyPage ("Say Hello");
+        var page = new Thunarx.PropertyPage (_("Say Hello"));
         if (files != null) {
             page.set_border_width (8);
             var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
