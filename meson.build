@@ -21,12 +21,13 @@ add_project_arguments(['--vapidir', vapi_dir], language: 'vala')
 extensions_dir = thunar_dep.get_variable('extensionsdir')
 # Usually prints something like: /usr/lib/x86_64-linux-gnu/thunarx-3
 
-shared_library('hello-plugin',
+shared_library(
+  'thunar-extension-vala-plugin',
   sources: ['src/main.vala'],
   dependencies: [thunar_dep, gtk_dep],
   install: true,
   install_dir: extensions_dir, # Tells Meson to install it to the Thunar extensions folder
-  # prefix: '', # Prevents Meson from adding an extra 'lib' prefix if Thunar doesn't expect it (optional)
+  name_prefix: '', # Prevents Meson from adding an extra 'lib' prefix if Thunar doesn't expect it (optional)
 )
 
 # 8 SUBDIR INCLUSIONS
