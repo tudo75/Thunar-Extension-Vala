@@ -106,7 +106,8 @@ namespace Thunarx {
         public virtual signal void renamed ();
     }
 
-    /* FIXED: Added missing virtual methods to MenuProvider 
+    /* 
+       FIXED: Added missing virtual methods to MenuProvider 
        Essential for Context Menus
     */
     /* FIXED: Changed Gtk.Window to Gtk.Widget to match C header signature */
@@ -117,7 +118,8 @@ namespace Thunarx {
         public abstract GLib.List<Thunarx.MenuItem> get_dnd_menu_items (Gtk.Widget window, Thunarx.FileInfo folder, GLib.List<Thunarx.FileInfo> files);
     }
 
-    /* FIXED: Added missing virtual method to PreferencesProvider 
+    /* 
+       FIXED: Added missing virtual method to PreferencesProvider 
        Essential for Thunar settings integration
     */
     [CCode (cheader_filename = "thunarx/thunarx.h", type_id = "thunarx_preferences_provider_get_type ()")]
@@ -125,7 +127,8 @@ namespace Thunarx {
         public abstract GLib.List<Thunarx.MenuItem> get_menu_items (Gtk.Window window);
     }
 
-    /* FIXED: Added missing virtual method to PropertyPageProvider 
+    /* 
+       FIXED: Added missing virtual method to PropertyPageProvider 
        Essential for adding tabs to file properties
     */
     [CCode (cheader_filename = "thunarx/thunarx.h", type_id = "thunarx_property_page_provider_get_type ()")]
@@ -144,7 +147,8 @@ namespace Thunarx {
         public abstract bool resident { get; set; }
     }
 
-    /* FIXED: Added missing virtual method to RenamerProvider 
+    /* 
+       FIXED: Added missing virtual method to RenamerProvider 
        Essential for Bulk Rename extensions
     */
     [CCode (cheader_filename = "thunarx/thunarx.h", type_id = "thunarx_renamer_provider_get_type ()")]
