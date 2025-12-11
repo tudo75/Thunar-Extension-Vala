@@ -18,7 +18,7 @@ add_project_arguments(['--vapidir', vapi_dir], language: 'vala')
 # A Thunar plugin must be installed into a specific system folder to work.
 # We ask the 'thunarx-3' dependency where that folder is.
 # This ensures that even if your distro changes paths, the build script finds the right place.
-extensions_dir = thunar_dep.get_pkgconfig_variable('extensionsdir')
+extensions_dir = thunar_dep.get_variable('extensionsdir')
 # Usually prints something like: /usr/lib/x86_64-linux-gnu/thunarx-3
 
 shared_library('hello-plugin',
